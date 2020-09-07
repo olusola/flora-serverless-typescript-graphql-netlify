@@ -4,13 +4,20 @@ import { ApolloServer as ApolloServerLambda } from 'apollo-server-lambda'
 
 const typeDefs = gql`
   type Query {
-    hello: String
+    me: String
+    gender: String
+    relation_status: String
+    website: String
+
   }
 `;
 
 const resolvers = {
   Query: {
-    hello: () => "Hi! Love from @stemmlerjs 🤠."
+    me: () => "Hi! Love from Flora🤠.",
+    gender: () => "Under investigation",
+    relation_status: () => "In 30days trial period",
+    website: () => "florajp.me"
   }
 };
 
